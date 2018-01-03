@@ -1,0 +1,36 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "Devpack Frontend",
+      "folder_exclude_patterns": ["node_modules"]
+    }
+  ],
+  "syntax_override": {
+    "\\.js$": ["Babel", "JavaScript (Babel)"],
+    "\\.json$": ["Babel", "JavaScript (Babel)"],
+    "\\.eslintrc": ["Babel", "JavaScript (Babel)"]
+  },
+  "settings": {
+    "js_prettier": {
+      "debug": false,
+      "auto_format_on_save": true, // auto execute eslint and prettier when save
+      "auto_format_on_save_excludes": [],
+      "allow_inline_formatting": false,
+      "custom_file_extensions": [],
+      "max_file_size_limit": -1,
+      "additional_cli_args": {
+         // "--config": "./prettier.config.js",
+      }
+    },
+    "tab_size": 2,
+    "translate_tabs_to_spaces": true
+  },
+  "build_system":
+  [
+    {
+      "name": "Node",
+      "shell_cmd": "node"
+    }
+  ]
+}
