@@ -53,6 +53,7 @@
     "no-self-assign": ["error"],
     //"no-extra-parens": ["error", "all", { "returnAssign": false }],
     "spaced-comment": ["error", "always"],
+    "react/jsx-uses-vars": ["error"],
 
     // ---------------------------------------------
     // skip because auto formatting by prettier
