@@ -1,7 +1,7 @@
 const Koa = require('koa')
 const app = new Koa()
 
-const webpackConfig = require('./webpack.config.js')
+const webpackConfig = require('./configs/webpack.dev.js')
 const webpack = require('webpack')
 const bundle = webpack(webpackConfig)
 
