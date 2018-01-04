@@ -1,6 +1,14 @@
 const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+const isDevelopment = process.env.NODE_ENV !== 'production'
+
+const devModeEntryFiles = isDevelopment
+  ? ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000']
+  : []
+
 module.exports = {
-  entry: __dirname + '/src/App/root.js',
+  entry: [...devModeEntryFiles, __dirname + '/src/App/root.js'],
   output: {
     path: __dirname + '/build',
     filename: 'bundle.js',
@@ -25,6 +33,12 @@ module.exports = {
       module: true,
       columns: true,
       lineToLine: false,
+    }),
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'boilerplate',
+      template: 'index.html',
     }),
   ],
 }
