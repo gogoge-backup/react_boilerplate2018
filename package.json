@@ -21,6 +21,7 @@
     "@babel/preset-react": "7.0.0-beta.36",
     "babel-eslint": "8.1.2",
     "babel-loader": "8.0.0-beta.0",
+    "css-loader": "0.28.7",
     "eslint": "4.14.0",
     "eslint-config-prettier": "2.9.0",
     "eslint-plugin-prettier": "2.4.0",
@@ -29,6 +30,8 @@
     "koa": "2.4.1",
     "koa-webpack-middleware": "1.0.7",
     "prettier": "1.9.2",
+    "react-css-modules": "4.7.1",
+    "style-loader": "0.19.1",
     "webpack": "3.10.0"
   },
   "dependencies": {
