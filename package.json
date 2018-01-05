@@ -2,14 +2,18 @@
   "name": "boilerplate",
   "version": "1.0.0",
   "main": "index.js",
-  "keywords": ["Wistron", "DevOps", "nodejs", "react"],
+  "keywords": [
+    "Wistron",
+    "DevOps",
+    "nodejs",
+    "react"
+  ],
   "license": "MIT",
   "author": "Wistron SWPC MRD300",
   "email": "tbd@devpack.cc",
   "url": "https://www.devpack.cc/",
   "scripts": {
-    "eslint-check":
-      "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "dev": "node dev-server.js",
     "build": "webpack --config configs/webpack.prod.js"
   },
@@ -25,6 +29,7 @@
     "eslint-config-prettier": "2.9.0",
     "eslint-plugin-prettier": "2.4.0",
     "eslint-plugin-react": "7.5.1",
+    "extract-text-webpack-plugin": "3.0.2",
     "html-webpack-plugin": "2.30.1",
     "koa": "2.4.1",
     "koa-webpack-middleware": "1.0.7",
