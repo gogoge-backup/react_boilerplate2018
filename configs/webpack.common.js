@@ -1,6 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
-
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 module.exports = {
   entry: [path.resolve('src/App/root.js')],
   output: {
@@ -39,6 +39,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new CleanWebpackPlugin([path.resolve('build/*')], {
+      root: path.resolve(''),
+    }),
     new webpack.SourceMapDevToolPlugin({
       // source map
       filename: '[name].js.map',
