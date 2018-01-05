@@ -3,9 +3,15 @@
     ["@babel/preset-env", {
       "targets": {
         "browsers": ["last 2 versions", "safari >= 7"]
-      }
+      },
+      "useBuiltIns": "usage",
+      "debug": true,
+      "indlue": [
+        // white list of build-in plugin,
+        // only the plugin list in the env preset allowed
+      ]
     }],
-    "@babel/preset-react"
+    "@babel/preset-react",
   ],
   "plugins": [
     // ---------------------------
