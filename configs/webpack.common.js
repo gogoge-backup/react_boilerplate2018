@@ -23,13 +23,5 @@ module.exports = {
     new CleanWebpackPlugin([path.resolve('build/*')], {
       root: path.resolve(''),
     }),
-    new webpack.SourceMapDevToolPlugin({
-      // source map
-      filename: '[name].js.map',
-      exclude: ['vendor.js'],
-      module: true,
-      columns: true,
-      lineToLine: false,
-    }),
   ],
 }

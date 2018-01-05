@@ -6,7 +6,7 @@ const path = require('path')
 
 module.exports = merge(common, {
   entry: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000'],
-  // devtool: 'inline-source-map',
+  devtool: 'eval', // 'inline-source-map',
   module: {
     rules: [
       {

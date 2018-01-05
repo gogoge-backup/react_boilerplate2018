@@ -7,7 +7,7 @@ const path = require('path')
 const PUBLIC_FOLDER_PATH = path.resolve('build')
 
 module.exports = merge(common, {
-  // devtool: 'source-map',
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -34,14 +34,6 @@ module.exports = merge(common, {
     ],
   },
   plugins: [
-    new webpack.SourceMapDevToolPlugin({
-      // source map
-      filename: '[name].js.map',
-      exclude: ['vendor.js'],
-      module: true,
-      columns: true,
-      lineToLine: false,
-    }),
     new HtmlWebpackPlugin({
       path: PUBLIC_FOLDER_PATH,
       filename: 'index.html',
