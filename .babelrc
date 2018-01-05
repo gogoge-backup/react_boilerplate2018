@@ -7,4 +7,10 @@
     }],
     "@babel/preset-react"
   ],
+  "plugins": [
+    // ---------------------------
+    // NOT inside preset-env
+    // ---------------------------
+    "transform-decorators-legacy",  // for @ symbol like @connect
+  ],
 }
