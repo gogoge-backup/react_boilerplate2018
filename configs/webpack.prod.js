@@ -3,6 +3,7 @@ const common = require('./webpack.common.js')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CompressionPlugin = require('compression-webpack-plugin')
 const path = require('path')
 const PUBLIC_FOLDER_PATH = path.resolve('build')
 
@@ -50,5 +51,6 @@ module.exports = merge(common, {
       'process.env.NODE_ENV': JSON.stringify('production'),
     }),
     new webpack.optimize.UglifyJsPlugin(),
+    new CompressionPlugin(),
   ],
 })
