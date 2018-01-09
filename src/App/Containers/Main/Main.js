@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import CSSModules from 'react-css-modules'
 import styles from './main.css'
-
+import { a } from '../Second'
+const k = { a: 1, b: 2 }
 @CSSModules(styles)
 export default class Main extends Component {
   componentWillMount() {
@@ -15,6 +16,8 @@ export default class Main extends Component {
   }
 
   click = () => {
+    console.warn(a)
+    console.warn(...k)
     console.warn(this.state)
   }
   render() {
