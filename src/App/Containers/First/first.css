@@ -1,0 +1,13 @@
+$yellow: #fc0;
+
+.tg {
+  /*composes: bg from '../Second/second.css';*/
+  .tt {
+    /*background: #999;*/
+    font-size: 4rem;
+  }
+}
+
+h1 {
+  background: $yellow;
+}

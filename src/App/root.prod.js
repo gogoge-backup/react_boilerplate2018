@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Main from './Containers/Main'
-import Second from './Containers/Second'
+
 import { Provider } from 'react-redux'
 import configureStore from './create-store'
-import DevTools from './Containers/DevTools'
+
+import Main from './Containers/Main'
 
 const initialState = {}
 const store = configureStore(initialState)
@@ -13,8 +13,6 @@ const Root = () => (
   <Provider store={store}>
     <div>
       <Main />
-      <Second />
-      <DevTools />
     </div>
   </Provider>
 )

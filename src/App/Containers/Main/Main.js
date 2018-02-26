@@ -1,44 +1,24 @@
-import React, { Component } from 'react'
-import CSSModules from 'react-css-modules'
-import styles from './main.css'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { incCounter, decCounter } from './action'
-import PropTypes from 'prop-types'
+import React from 'react'
 
-const mapStateToProps = (state) => {
-  return state.main
-}
+import { Switch, Link, Route, HashRouter as Router } from 'react-router-dom'
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    actions: bindActionCreators({ incCounter, decCounter }, dispatch),
-  }
-}
+import First from '../First'
+import Second from '../Second'
+import NoMatch from '../NoMatch'
 
-@connect(mapStateToProps, mapDispatchToProps)
-@CSSModules(styles)
-export default class Main extends Component {
-  onInc = () => {
-    this.props.actions.incCounter(3)
-  }
+const Main = () => (
+  <Router>
+    <div>
+      <Link to="/">{'Home'}</Link>
+      <Link to="/Second">{'Second'}</Link>
+      <hr />
+      <Switch>
+        <Route exact path="/" component={First} />
+        <Route path="/Second" component={Second} />
+        <Route component={NoMatch} />
+      </Switch>
+    </div>
+  </Router>
+)
 
-  onDec = () => {
-    this.props.actions.decCounter(2)
-  }
-
-  render() {
-    return (
-      <div styleName="tg">
-        <h1 styleName="tt">{this.props.counter}</h1>
-        <button onClick={this.onInc}>+</button>
-        <button onClick={this.onDec}>-</button>
-      </div>
-    )
-  }
-}
-
-Main.propTypes = {
-  actions: PropTypes.object,
-  counter: PropTypes.number,
-}
+export default Main

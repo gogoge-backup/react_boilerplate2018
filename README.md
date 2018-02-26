@@ -32,12 +32,12 @@
   * [x] webpack ugilify plugin
 * [x] Compress asset to gzip
   * [x] compression-webpack-plugin
-* [ ] React
-  * [x] Redux
-  * [x] [Redux devTool](https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md)
-  * [ ] react-router
-  * [ ] reselect
-  * [ ] Redux-saga
+* [x] React
+* [x] Redux
+* [x] [Redux devTool](https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md)
+* [x] [react-router](https://reacttraining.com/react-router/web/example/no-match)
+* [ ] reselect
+* [ ] Redux-saga
 * [ ] Code-splitting
 
 ---
