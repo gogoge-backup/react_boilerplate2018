@@ -1,20 +1,16 @@
 import TYPES from './action-type'
-
-const initialState = {
+import { fromJS } from 'immutable'
+const initialState = fromJS({
   counter: 0,
-}
+})
 
 function reducer(state = initialState, action) {
   switch (action.type) {
     case TYPES.INC: {
-      return Object.assign({}, state, {
-        counter: state.counter + action.step,
-      })
+      return state.set('counter', state.get('counter') + action.step)
     }
     case TYPES.DEC: {
-      return Object.assign({}, state, {
-        counter: state.counter - action.step,
-      })
+      return state.set('counter', state.get('counter') - action.step)
     }
     default:
       return state

@@ -1,4 +1,5 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c7a9860c177c44a7b21368e94b88188b)](https://www.codacy.com/app/gogoge/react_bolierplate2018?utm_source=github.com&utm_medium=referral&utm_content=gogoge/react_bolierplate2018&utm_campaign=Badge_Grade)
 
 # Roadmap
 
@@ -36,7 +37,8 @@
 * [x] Redux
 * [x] [Redux devTool](https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md)
 * [x] [react-router](https://reacttraining.com/react-router/web/example/no-match)
-* [ ] reselect
+* [x] [reselect](https://github.com/reactjs/reselect)
+* [x] immutable.js
 * [ ] Redux-saga
 * [ ] Code-splitting
 
@@ -60,5 +62,3 @@ yarn build
 
 `Ctrl+H` Toggle the visibility
 `Ctrl+Q` Change the position
-
-

@@ -5,34 +5,31 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { incCounter, decCounter } from './action'
 import PropTypes from 'prop-types'
-
-const mapStateToProps = (state) => {
-  return state.first
-}
+import { selector as mapStateToProps } from './selector'
 
 const mapDispatchToProps = (dispatch) => {
   return {
     actions: bindActionCreators({ incCounter, decCounter }, dispatch),
   }
 }
-
+const STEP = 3
 @connect(mapStateToProps, mapDispatchToProps)
 @CSSModules(styles)
 export default class Main extends Component {
   onInc = () => {
-    this.props.actions.incCounter(3)
+    this.props.actions.incCounter(STEP)
   }
 
   onDec = () => {
-    this.props.actions.decCounter(2)
+    this.props.actions.decCounter(STEP)
   }
 
   render() {
     return (
       <div styleName="tg">
         <h1 styleName="tt">{this.props.counter}</h1>
-        <button onClick={this.onInc}>+</button>
-        <button onClick={this.onDec}>-</button>
+        <button onClick={this.onInc}>{'+'}</button>
+        <button onClick={this.onDec}>{'-'}</button>
       </div>
     )
   }
