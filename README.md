@@ -34,6 +34,7 @@
   * [x] compression-webpack-plugin
 * [ ] React
   * [x] Redux
+  * [x] [Redux devTool](https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md)
   * [ ] react-router
   * [ ] reselect
   * [ ] Redux-saga
@@ -54,4 +55,10 @@ Build production bundle js and css and index.html
 ```
 yarn build
 ```
+
+# Shortcut of Redux devtool
+
+`Ctrl+H` Toggle the visibility
+`Ctrl+Q` Change the position
+
 

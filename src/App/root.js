@@ -1,24 +1,5 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Main from './Containers/Main'
-import Second from './Containers/Second'
-import { Provider } from 'react-redux'
-import store from './create-store'
-
-const Root = () => (
-  <Provider store={store}>
-    <div>
-      <Main />
-      <Second />
-    </div>
-  </Provider>
-)
-
-ReactDOM.render(<Root />, document.getElementById('root'))
-
-if (module.hot) {
-  // Enable Webpack hot module replacement
-  module.hot.accept(Root, () => {
-    ReactDOM.render(<Root />, document.getElementById('root'))
-  })
+if (process.env.NODE_ENV === 'production') {
+  module.exports = require('./rootWithOutDevTools')
+} else {
+  module.exports = require('./rootWithDevTools')
 }
