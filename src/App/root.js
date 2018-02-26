@@ -2,12 +2,16 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Main from './Containers/Main'
 import Second from './Containers/Second'
+import { Provider } from 'react-redux'
+import store from './create-store'
 
 const Root = () => (
-  <div>
-    <Main />
-    <Second />
-  </div>
+  <Provider store={store}>
+    <div>
+      <Main />
+      <Second />
+    </div>
+  </Provider>
 )
 
 ReactDOM.render(<Root />, document.getElementById('root'))

@@ -1,33 +1,44 @@
 import React, { Component } from 'react'
 import CSSModules from 'react-css-modules'
 import styles from './main.css'
-import { a } from '../Second'
-const k = { a: 1, b: 2 }
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { incCounter, decCounter } from './action'
+import PropTypes from 'prop-types'
+
+const mapStateToProps = (state) => {
+  return state.main
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    actions: bindActionCreators({ incCounter, decCounter }, dispatch),
+  }
+}
+
+@connect(mapStateToProps, mapDispatchToProps)
 @CSSModules(styles)
 export default class Main extends Component {
-  componentWillMount() {
-    this.setState({
-      k: 3,
-    })
+  onInc = () => {
+    this.props.actions.incCounter(3)
   }
 
-  state = {
-    k: 2,
+  onDec = () => {
+    this.props.actions.decCounter(2)
   }
 
-  click = () => {
-    console.warn(a)
-    console.warn(...k)
-    console.warn(this.state)
-  }
   render() {
     return (
       <div styleName="tg">
-        <h1 styleName="tt">{'Main'}</h1>
-        <button onClick={this.click}>Go</button>
+        <h1 styleName="tt">{this.props.counter}</h1>
+        <button onClick={this.onInc}>+</button>
+        <button onClick={this.onDec}>-</button>
       </div>
     )
   }
 }
 
-// export default CSSModules(Main, styles)
+Main.propTypes = {
+  actions: PropTypes.object,
+  counter: PropTypes.number,
+}

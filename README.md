@@ -32,7 +32,8 @@
   * [x] webpack ugilify plugin
 * [x] Compress asset to gzip
   * [x] compression-webpack-plugin
-* [ ] React / Redux
+* [ ] React
+  * [x] Redux
   * [ ] react-router
   * [ ] reselect
   * [ ] Redux-saga
