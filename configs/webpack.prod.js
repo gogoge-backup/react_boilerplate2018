@@ -6,7 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const path = require('path')
 const PUBLIC_FOLDER_PATH = path.resolve('build')
-
+const WebpackMonitor = require('webpack-monitor')
 module.exports = merge(common, {
   devtool: 'source-map',
   module: {
@@ -52,5 +52,11 @@ module.exports = merge(common, {
     }),
     new webpack.optimize.UglifyJsPlugin(),
     new CompressionPlugin(),
+    new WebpackMonitor({
+      capture: true, // -> default 'true'
+      target: '../reports/build-report.json', // default -> '../monitor/stats.json'
+      launch: true, // -> default 'false'
+      port: 3030, // default -> 8081
+    }),
   ],
 })

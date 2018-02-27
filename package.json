@@ -56,7 +56,8 @@
     "stylelint": "9.1.1",
     "stylelint-config-standard": "18.1.0",
     "webpack": "3.10.0",
-    "webpack-merge": "4.1.1"
+    "webpack-merge": "4.1.1",
+    "webpack-monitor": "1.0.14"
   },
   "dependencies": {
     "history": "4.7.2",
