@@ -1,7 +1,8 @@
 const path = require('path')
 // const webpackConfig = require('./webpack.config')
-module.exports = (ctx) => {
+module.exports = () => {
   // Below are ctx format
+  // need add ctx in argument: module.exports = (ctx) => {
   // one input css have one ctx like below
   // {
   //    cwd: <current folder>,
