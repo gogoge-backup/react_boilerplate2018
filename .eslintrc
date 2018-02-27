@@ -31,7 +31,7 @@
     "no-new-wrappers": ["error"],
     "no-array-constructor": ["error"],
     "no-new-object": ["error"],
-    "no-magic-numbers": ["warn",  { "ignore": [1], "ignoreArrayIndexes": true, "detectObjects": true }],
+    // "no-magic-numbers": ["warn",  { "ignore": [1], "ignoreArrayIndexes": true, "detectObjects": true }],
     "no-var": ["error"],
     "operator-assignment": ["error"],
     "no-unreachable": ["error"],
