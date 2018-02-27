@@ -3,45 +3,7 @@
 
 # Roadmap
 
-* [x] Coding Style
-  * [x] eslint
-  * [x] prettier
-  * [x] editorconfg
-  * [x] [stylelint](https://github.com/stylelint/stylelint-config-standard)
-* [x] Filter unnessary file from git: .gitigonre
-* [x] dev server
-  * [x] Koa
-  * [x] ~~HTTPS / HTTP2~~ `TBD if SSR`
-  * [x] HMR
-  * [ ] React Hot Loader 4
-* [x] CSS Preprocessor, and scope localize
-  * [x] PostCSS,
-  * [x] React CSS Module
-  * [x] CSS import
-  * [x] CSS simple var
-  * [x] NextCSS
-  * [ ] CSS mixin
-* [x] Webpack config separation: common, dev, prod merge by webpack-merge
-* [x] Separate CSS file from bundle.js
-  * [x] ExtractTextPlugin
-* [x] Mapping bundle.js pc to Source map
-* [x] Babel 7
-  * [x] decorator symbol
-  * [x] babel-plugin-transform-class-properties: writing react compnent using es6 class
-  * [x] auto add polyfill: preset-env
-* [x] Production mode
-  * [x] production environment
-  * [x] webpack ugilify plugin
-* [x] Compress asset to gzip
-  * [x] compression-webpack-plugin
-* [x] React
-* [x] Redux
-* [x] [Redux devTool](https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md)
-* [x] [react-router](https://reacttraining.com/react-router/web/example/no-match)
-* [x] [reselect](https://github.com/reactjs/reselect)
-* [x] immutable.js
-* [ ] Redux-saga
-* [ ] Code-splitting
+[wiki](https://github.com/gogoge/react_boilerplate2018/wiki/Roadmap)
 
 ---
 
