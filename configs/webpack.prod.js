@@ -4,9 +4,9 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
+const WebpackMonitor = require('webpack-monitor')
 const path = require('path')
 const PUBLIC_FOLDER_PATH = path.resolve('build')
-const WebpackMonitor = require('webpack-monitor')
 module.exports = merge(common, {
   devtool: 'source-map',
   entry: {
@@ -23,12 +23,6 @@ module.exports = merge(common, {
       'redux-saga',
       'reselect',
     ],
-  },
-  output: {
-    publicPath: '',
-    path: PUBLIC_FOLDER_PATH,
-    filename: '[name].[hash].js',
-    chunkFilename: '[name].bundle.js',
   },
   module: {
     rules: [
