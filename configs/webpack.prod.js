@@ -9,6 +9,27 @@ const PUBLIC_FOLDER_PATH = path.resolve('build')
 const WebpackMonitor = require('webpack-monitor')
 module.exports = merge(common, {
   devtool: 'source-map',
+  entry: {
+    vendor: [
+      'history',
+      'immutable',
+      'prop-types',
+      'react',
+      'react-dom',
+      'react-redux',
+      'react-router-dom',
+      'react-router-redux',
+      'redux',
+      'redux-saga',
+      'reselect',
+    ],
+  },
+  output: {
+    publicPath: '',
+    path: PUBLIC_FOLDER_PATH,
+    filename: '[name].[hash].js',
+    chunkFilename: '[name].bundle.js',
+  },
   module: {
     rules: [
       {
