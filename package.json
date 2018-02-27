@@ -2,14 +2,18 @@
   "name": "boilerplate",
   "version": "1.0.0",
   "main": "index.js",
-  "keywords": ["Wistron", "DevOps", "nodejs", "react"],
+  "keywords": [
+    "Wistron",
+    "DevOps",
+    "nodejs",
+    "react"
+  ],
   "license": "MIT",
   "author": "Wistron SWPC MRD300",
   "email": "tbd@devpack.cc",
   "url": "https://www.devpack.cc/",
   "scripts": {
-    "eslint-check":
-      "eslint --print-config .eslintrc | eslint-config-prettier-check",
+    "eslint-check": "eslint --print-config .eslintrc | eslint-config-prettier-check",
     "stylelint-check": "stylelint \"**/*.css\" --config .stylelintrc",
     "dev": "node dev-server.js",
     "build": "webpack --config configs/webpack.prod.js"
@@ -54,12 +58,14 @@
     "webpack-merge": "4.1.1"
   },
   "dependencies": {
+    "history": "4.7.2",
     "immutable": "3.8.2",
     "prop-types": "15.6.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-redux": "5.0.6",
     "react-router-dom": "4.2.2",
+    "react-router-redux": "5.0.0-alpha.9",
     "redux": "3.7.2",
     "reselect": "3.0.1"
   }

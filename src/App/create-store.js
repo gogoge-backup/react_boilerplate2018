@@ -1,10 +1,15 @@
-import { createStore, compose } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
 import rootReducer from './reducers/root'
+import createHistory from 'history/createHashHistory'
 import DevTools from './Containers/DevTools'
+import { routerMiddleware } from 'react-router-redux'
+
+export const history = createHistory()
+const middleware = routerMiddleware(history)
 
 const devEnhancer = compose(
   // Middleware you want to use in development:
-  // applyMiddleware(d1, d2, d3),
+  applyMiddleware(middleware),
   // Required! Enable Redux DevTools with the monitors you chose
   DevTools.instrument()
 )
