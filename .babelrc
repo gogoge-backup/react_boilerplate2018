@@ -19,5 +19,7 @@
     // ---------------------------
     "transform-decorators-legacy",  // for @ symbol like @connect
     "transform-class-properties",   // for ES2015 class in React Component
+    //["transform-object-rest-spread", { "useBuiltIns": true }], // for ...Object
+    "@babel/plugin-proposal-object-rest-spread",
   ],
 }

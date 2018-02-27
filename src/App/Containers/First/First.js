@@ -3,13 +3,16 @@ import CSSModules from 'react-css-modules'
 import styles from './first.css'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { incCounter, decCounter } from './action'
+import { incCounter, decCounter, fetchPostTask } from './action'
 import PropTypes from 'prop-types'
 import { selector as mapStateToProps } from './selector'
 import { push } from 'react-router-redux'
 const mapDispatchToProps = (dispatch) => {
   return {
-    actions: bindActionCreators({ push, incCounter, decCounter }, dispatch),
+    actions: bindActionCreators(
+      { push, incCounter, decCounter, fetchPostTask },
+      dispatch
+    ),
   }
 }
 const STEP = 3
@@ -28,12 +31,17 @@ export default class Main extends Component {
     this.props.actions.push('/gg')
   }
 
+  onFetch = () => {
+    this.props.actions.fetchPostTask()
+  }
+
   render() {
     return (
       <div styleName="tg">
         <h1 styleName="tt">{this.props.counter}</h1>
         <button onClick={this.onInc}>{'+'}</button>
         <button onClick={this.onDec}>{'-'}</button>
+        <button onClick={this.onFetch}>{'test saga fetch'}</button>
         <button onClick={this.onNotFound}>{'Go to NotFound'}</button>
       </div>
     )

@@ -12,6 +12,9 @@ function reducer(state = initialState, action) {
     case TYPES.DEC: {
       return state.set('counter', state.get('counter') - action.step)
     }
+    case 'FETCH_POSTS_SUCCESS':
+      console.warn(action.result)
+      return state
     default:
       return state
   }

@@ -27,6 +27,8 @@ module.exports = {
     alias: {
       src: path.resolve('src/'),
       App: path.resolve('src/App/'),
+      Api: path.resolve('src/App/Api'),
+      Sagas: path.resolve('src/App/sagas'),
       Containers: path.resolve('src/App/Containers'),
       Reducers: path.resolve('src/App/reducers'),
     },

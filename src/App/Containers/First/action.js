@@ -1,4 +1,5 @@
 import TYPES from './action-type'
+import { fetchPosts } from './saga'
 
 const incCounter = (step) => {
   return {
@@ -14,4 +15,11 @@ const decCounter = (step) => {
   }
 }
 
-export { incCounter, decCounter }
+const fetchPostTask = () => {
+  return {
+    type: 'SAGA_FETCH',
+    task: fetchPosts,
+  }
+}
+
+export { incCounter, decCounter, fetchPostTask }
