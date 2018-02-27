@@ -1,4 +1,4 @@
-import { put, call } from 'redux-saga/effects'
+import { call } from 'redux-saga/effects'
 import { fetchPosts as fetchPostsObject } from 'Api/posts'
 import { fetchTask } from 'Sagas/fetch'
 
