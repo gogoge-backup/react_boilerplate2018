@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux'
-import rootReducer from './reducers/root'
+import rootReducer from 'Reducers/root'
 import createHistory from 'history/createHashHistory'
-import DevTools from './Containers/DevTools'
+import DevTools from 'Containers/DevTools'
 import { routerMiddleware } from 'react-router-redux'
 
 export const history = createHistory()
@@ -19,8 +19,8 @@ export default function configureStore(initialState) {
 
   // Hot reload reducers (requires Webpack or Browserify HMR to be enabled)
   if (module.hot) {
-    module.hot.accept('./reducers/root.js', () =>
-      store.replaceReducer(require('./reducers/root.js').default)
+    module.hot.accept('Reducers/root.js', () =>
+      store.replaceReducer(require('Reducers/root.js').default)
     )
   }
 

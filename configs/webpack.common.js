@@ -23,4 +23,12 @@ module.exports = {
       root: path.resolve(''),
     }),
   ],
+  resolve: {
+    alias: {
+      src: path.resolve('src/'),
+      App: path.resolve('src/App/'),
+      Containers: path.resolve('src/App/Containers'),
+      Reducers: path.resolve('src/App/reducers'),
+    },
+  },
 }

@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { reducer as first } from '../Containers/First/'
+import { reducer as first } from 'Containers/First/'
 import { routerReducer } from 'react-router-redux'
 
 const reducers = combineReducers({

@@ -2,9 +2,9 @@ import React from 'react'
 
 import { Switch, Link, Route, HashRouter as Router } from 'react-router-dom'
 
-import First from '../First'
-import Second from '../Second'
-import NoMatch from '../NoMatch'
+import First from 'Containers/First'
+import Second from 'Containers/Second'
+import NoMatch from 'Containers/NoMatch'
 import { ConnectedRouter } from 'react-router-redux'
 import { history } from '../../create-store'
 

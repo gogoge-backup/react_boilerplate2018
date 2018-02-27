@@ -2,10 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import { Provider } from 'react-redux'
-import configureStore from './create-store'
+import configureStore from 'App/create-store'
 
-import Main from './Containers/Main'
-import DevTools from './Containers/DevTools'
+import Main from 'Containers/Main'
+import DevTools from 'Containers/DevTools'
 
 const initialState = {}
 const store = configureStore(initialState)
