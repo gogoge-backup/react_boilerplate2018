@@ -7,6 +7,7 @@
   * [x] eslint
   * [x] prettier
   * [x] editorconfg
+  * [x] [stylelint](https://github.com/stylelint/stylelint-config-standard)
 * [x] Filter unnessary file from git: .gitigonre
 * [x] dev server
   * [x] Koa
