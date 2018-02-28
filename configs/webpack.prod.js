@@ -54,6 +54,7 @@ module.exports = merge(common, {
     new HtmlWebpackPlugin({
       path: PUBLIC_FOLDER_PATH,
       filename: 'index.html',
+      favicon: 'assets/favicon.ico',
       inject: 'body', // auto inject the bundle files
       template: path.resolve('template.html'),
     }),

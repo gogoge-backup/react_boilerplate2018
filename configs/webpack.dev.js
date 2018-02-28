@@ -37,6 +37,7 @@ module.exports = merge(common, {
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
+      favicon: 'assets/favicon.ico',
       template: path.resolve('template.html'),
     }),
   ],
