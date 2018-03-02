@@ -1,0 +1,19 @@
+image: node:9
+# services:
+#   - postgres
+
+# before_script:
+#   - bundle install
+
+# after_script:
+#   - rm secrets
+
+stages:
+  - sonar
+
+staticscan:
+  stage: sonar
+  script:
+    - ls
+  only:
+    - gitlab-sonar
