@@ -1,14 +1,15 @@
 const merge = require('webpack-merge')
 const common = require('./webpack.common.js')
-const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const glob = require('glob')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const PurifyCSSPlugin = require('purifycss-webpack')
 const CompressionPlugin = require('compression-webpack-plugin')
 const WebpackMonitor = require('webpack-monitor')
 const path = require('path')
 const PUBLIC_FOLDER_PATH = path.resolve('build')
 module.exports = merge(common, {
-  devtool: 'source-map',
+  mode: 'production',
   entry: {
     vendor: [
       'history',
@@ -41,7 +42,7 @@ module.exports = merge(common, {
                 // alias: {
                 //  'MAIN':'src/App/Containers/Main'
                 // },
-                localIdentName: '[path]___[name]__[local]___[hash:base64:5]',
+                localIdentName: 'purify_[hash:base64:5]',
               },
             },
             'postcss-loader',
@@ -63,10 +64,13 @@ module.exports = merge(common, {
       disable: false,
       allChunks: true,
     }),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
+    new PurifyCSSPlugin({
+      // Give paths to parse for rules. These should be absolute!
+      paths: glob.sync(path.join(__dirname, 'build/*.html')),
+      purifyOptions: {
+        whitelist: ['*purify*'],
+      },
     }),
-    new webpack.optimize.UglifyJsPlugin(),
     new CompressionPlugin(),
     new WebpackMonitor({
       capture: true, // -> default 'true'
