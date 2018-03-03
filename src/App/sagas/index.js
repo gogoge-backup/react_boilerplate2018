@@ -1,3 +1,3 @@
-import { watchFetch, fetchTask } from './fetch'
-export default watchFetch
+import { sagaWatchers, fetchTask } from './fetch'
+export default sagaWatchers
 export { fetchTask }

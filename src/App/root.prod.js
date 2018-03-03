@@ -6,13 +6,13 @@ import configureStore from 'App/create-store'
 
 import Main from 'Containers/Main'
 
-import sagas from 'Sagas/fetch'
+import sagaWatchers from 'Sagas'
 
 const initialState = {}
 
 const render = (store) => {
   // saga start listen
-  store.sagaRun(sagas)
+  store.sagaRun(sagaWatchers)
   const Root = () => (
     <Provider store={store}>
       <div>

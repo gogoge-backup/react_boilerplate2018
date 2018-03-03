@@ -1,4 +1,4 @@
-import { call, put, take, spawn } from 'redux-saga/effects'
+import { call, put, take, actionChannel } from 'redux-saga/effects'
 
 // helper
 export function* fetchTask(url, status, options) {
@@ -21,10 +21,11 @@ export function* fetchTask(url, status, options) {
 }
 
 // listener
-export function* watchFetch() {
+export function* sagaWatchers() {
+  const requestChannel = yield actionChannel('SAGA_FETCH')
   while (true) {
     try {
-      const { task } = yield take('SAGA_FETCH')
+      const { task } = yield take(requestChannel)
       yield call(task)
     } catch (ex) {
       console.error('error occurs when polling: ', ex)
@@ -32,8 +33,4 @@ export function* watchFetch() {
       console.info('refreshing data cancellation.')
     }
   }
-}
-
-export default function* root() {
-  yield [spawn(watchFetch)]
 }
