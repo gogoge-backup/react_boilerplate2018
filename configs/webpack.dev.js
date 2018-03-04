@@ -8,7 +8,7 @@ module.exports = merge(common, {
   entry: {
     main: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000'],
   },
-  devtool: 'eval', // 'inline-source-map',
+  mode: 'development',
   module: {
     rules: [
       {
