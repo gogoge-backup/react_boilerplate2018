@@ -16,7 +16,9 @@
     "eslint-check": "eslint --print-config .eslintrc | eslint-config-prettier-check",
     "stylelint-check": "stylelint \"**/*.css\" --config .stylelintrc",
     "dev": "node dev-server.js",
-    "build": "webpack --config configs/webpack.prod.js"
+    "build": "webpack --config configs/webpack.prod.js",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "@babel/core": "7.0.0-beta.40",
@@ -65,14 +67,16 @@
   "dependencies": {
     "history": "4.7.2",
     "immutable": "3.8.2",
-    "prop-types": "15.6.1",
-    "react": "16.2.0",
-    "react-dom": "16.2.0",
+    "prop-types": "15.6.2",
+    "react": "16.5.0",
+    "react-dom": "16.5.0",
     "react-redux": "5.0.7",
     "react-router-dom": "4.2.2",
     "react-router-redux": "5.0.0-alpha.9",
     "redux": "3.7.2",
-    "redux-saga": "1.0.0-beta.0",
-    "reselect": "3.0.1"
-  }
+    "redux-saga": "1.0.0",
+    "reselect": "3.0.1",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
